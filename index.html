@@ -3,88 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <title>Football matches</title>
+    <link rel="stylesheet" href="teams.css"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
 <button id="refresh-button" class="refresh">Refresh</button>
-<style>
-    .refresh {
-        background-color: cornflowerblue;
-        color: whitesmoke;
-        padding: 10px;
-        border-radius: 5px;
-        border-color: cornflowerblue;
-    }
-
-    .refresh:hover {
-        box-shadow: 10px 10px 10px black;
-    }
-
-    .teams {
-        padding: 25px;
-        margin-left: auto;
-        margin-right: auto;
-        display: grid;
-        grid-template-columns: repeat(auto-fill, 150px);
-        grid-template-rows: repeat(auto-fill, 150px);
-        grid-auto-rows: 150px;
-    }
-
-    .team__logo {
-        max-width: 100px;
-        max-height: 100px;
-    }
-
-    .team__card {
-        text-align: center;
-    }
-
-    .team__link {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-between;
-        height: 100%;
-    }
-</style>
 <div class="teams">
 </div>
-<script>
-    (function () {
-        'use strict';
-
-        const headers = new Headers();
-        headers.append('X-Auth-Token', 'f113f557ce2a428e8a46dc9e659212f8');
-        document.getElementById('refresh-button').addEventListener('click', getTeams)
-
-        function getTeams() {
-            fetch('https://api.football-data.org/v2/teams', {
-                method: 'GET',
-                headers: headers
-            })
-                .then(res => res.json())
-                .then(responseJSON => {
-                    function generateHTML(team) {
-                        return `<div class="team__card">
-
-                      <a class="team__link" href="matches.html?id=${team.id}">
-                        <img class="team__logo" alt="${team.name}" src="${team.crestUrl}" />
-                        <p>${team.name}</p>
-                      </a>
-                    </div>`;
-                    }
-
-                    const root = document.querySelector(".teams");
-                    responseJSON.teams.forEach((team) => {
-                        root.innerHTML += generateHTML(team);
-                    });
-                })
-                .catch(alert);
-        }
-
-        getTeams();
-
-    })();
-</script>
+<script src="teams.js"></script>
 </body>
 </html>
