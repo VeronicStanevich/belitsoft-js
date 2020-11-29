@@ -23,6 +23,9 @@
 .team_name {
     text-align: center;
 }
+.team_crestUrl{
+    max-width: 100%;
+}
 
 .nextMatches-block {
     flex-grow: 1;
