@@ -102,8 +102,8 @@
                 function generateHTML(match) {
                     return `<tr class="nextMatches nextMatches_border">
                        <td class="nextMatches_border">Date: ${new Date(match.utcDate).toLocaleString()}</td>
-                       <td class="nextMatches_border">Home: <a href="/matches.html?id=${match.homeTeam.id}">${match.homeTeam.name}</a></td>
-                       <td class="nextMatches_border">Away: <a href="/matches.html?id=${match.awayTeam.id}">${match.awayTeam.name}</a></td>
+                       <td class="nextMatches_border">Home: <a href="matches.html?id=${match.homeTeam.id}">${match.homeTeam.name}</a></td>
+                       <td class="nextMatches_border">Away: <a href="matches.html?id=${match.awayTeam.id}">${match.awayTeam.name}</a></td>
                     </tr class="nextMatches_border">`;
                 }
 
