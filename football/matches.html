@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MATCHES</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+<div class="mainInformation">
+    <div>
+        <a class="back-link" href="index.html">Back to teams list</a>
+        <div class="team" id="team">
+            <h2 id="team_name" class="team_name"></h2>
+            <table>
+                <tr>
+                    <td colspan="2" align="Center"><img src="" id="team_crestUrl" class="team_crestUrl"></td>
+                </tr>
+                <tr>
+                    <td>Short name:</td>
+                    <td id="team_shortName"></td>
+                </tr>
+                <tr>
+                    <td>TLA:</td>
+                    <td id="team_tla"></td>
+                </tr>
+                <tr>
+                    <td>Address:</td>
+                    <td id="team_address"></td>
+                </tr>
+                <tr>
+                    <td>Phone:</td>
+                    <td><a href="" id="team_phone"></a></td>
+                </tr>
+                <tr>
+                    <td>Website:</td>
+                    <td><a href="" id="team_website">Go to site</a></td>
+                </tr>
+                <tr>
+                    <td>Email:</td>
+                    <td><a id="team_email" href=""></a></td>
+                </tr>
+                <tr>
+                    <td>Founded:</td>
+                    <td id="team_founded"></td>
+                </tr>
+                <tr>
+                    <td>Club colors:</td>
+                    <td id="team_clubColors"></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="nextMatches-block">
+        <h2 class="nextMatches_title">Next matches</h2>
+        <section class="loading"><h2 id="loading">Loading...</h2></section>
+        <section class="error error_active">
+            <h2 id="err"></h2>
+        </section>
+        <table class="nextMatches"></table>
+    </div>
+</div>
+<script src="matches.js"></script>
+</body>
+</html>

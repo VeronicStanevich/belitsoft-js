@@ -1,0 +1,59 @@
+.loading {
+    display: block;
+}
+
+.loading_disabled {
+    display: none;
+}
+
+.error {
+    display: none;
+}
+.error_active {
+    display: block;
+}
+
+.team {
+    max-width: 350px;
+    border: 3px solid black;
+    border-radius: 30px;
+    padding: 10px;
+}
+
+.team_name {
+    text-align: center;
+}
+.team_crestUrl{
+    max-width: 100%;
+}
+
+.nextMatches-block {
+    flex-grow: 1;
+}
+
+.nextMatches {
+    width: 100%;
+    padding-left: 20px;
+}
+
+.nextMatches_border {
+    border: 1px solid aqua;
+}
+
+.nextMatches_title {
+    text-align: center;
+}
+
+.mainInformation {
+    display: flex;
+}
+@media screen and (max-width: 768px) {
+    .mainInformation {
+        flex-direction: column;
+    }
+}
+.back-link {
+    display: block;
+    margin-bottom: 20px;
+    padding: 15px;
+}
